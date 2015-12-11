@@ -1,0 +1,34 @@
+{
+  "name": "meVoy",
+  "private": true,
+  "version": "0.0.0",
+  "description": "mevoyalamierda.com",
+  "dependencies": {
+    "grunt": "0.4.x",
+    "hapi": "1.20.0",
+    "travelogue": "0.4.4",
+    "passport": "0.3.2",
+    "yar": "0.4.1",
+    "passport-facebook": "1.0.3",
+    "hapi-mongodb": "1.3.2",
+    "async": "1.5.0",
+    "nodemailer": "0.7.1",
+    "q": "0.9.7",
+    "facebook-notification": "0.1.1",
+    "ejs": "0.8.8"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "repository": "",
+  "author": "Leandro D'Onofrio",
+  "license": "",
+  "devDependencies": {
+    "grunt-nodemon": "~0.1.2",
+    "grunt-contrib-stylus": "~0.11.0",
+    "grunt-concurrent": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-exec": "~0.4.2"
+  }
+}

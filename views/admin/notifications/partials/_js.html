@@ -1,0 +1,99 @@
+<script>
+
+	$(document).ready(function(){
+
+		$(".send").on("click", function(){
+
+			var $this = $(this);
+			var uri = $('#uri').val();
+			var text = $('#text').val();
+			var facebookId = <%= config.app.admin %>;
+			var users = [];
+			var sent = 0;
+			var send = function(){
+
+				$.ajax({
+					type: "POST",
+					url: "/admin/notification/send",
+					data: {
+						uri: uri,
+						text: text,
+						facebookId: users[sent]
+					}
+				})
+				.done(function(msg) {
+
+					var response = JSON.parse(msg);
+
+					if(response.success === true){
+
+						$("#user-" + users[sent]).find(".media-heading").append(" ✓ - ¡Enviado!");
+
+						sent++;
+
+						if(users[sent] === undefined){
+
+							alert("¡Se han enviado todas las notificaciones!");
+
+						} else {
+
+							send();
+
+						}
+
+					} else {
+
+						$("#user-" + users[sent]).find(".media-heading").append(" ✗ - Hubo un problema, intenta nuevamente");
+
+						sent++;
+
+						if(users[sent] === undefined){
+
+							alert("¡Se han enviado todas las notificaciones, pero existen algunas fallidas!");
+
+						} else {
+
+							send();
+
+						}
+
+					}
+
+				})
+				.fail(function() {
+
+					$("#user-" + users[sent]).find(".media-heading").append(" ✗ - Hubo un error al realizar la operación");
+
+				});
+
+			};
+
+			if(uri !== "" && text !== ""){
+
+				if($this.attr("id") === "send-notifications"){
+
+					$(".user").each(function(index){
+
+						users.push($(this).data("user").facebookId);
+
+					});
+
+				} else {
+
+					users.push(facebookId);
+
+				}
+
+				send();
+
+			} else {
+
+				alert("¡Todos los campos deben estar completos!");
+
+			}
+
+		});
+
+	});
+
+</script>

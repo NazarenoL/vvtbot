@@ -1,0 +1,37 @@
+<!-- Share -->
+<% for (var prop in flash) { %>
+
+<% if(prop === "interested-gift"){ %>
+
+	<div class="modal fade" id="share">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="modal-title">¡Gracias por anotarte, ahora te toca a vos!</h3>
+				</div>
+				<div class="modal-body">
+					Si conoces a alguien que le interese alguna de las cosas que estoy vendiendo no dudes en avisarle o también podes ayudarme haciendo click en el botón "¡Compartir en Facebook!" de más abajo :-D
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">No me interesa compartir, soy una mala persona</button>
+					<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?app_id=<%= config.plugins.travelogue.facebook.clientID %>&u=<%= config.app.url %>" target="_blank">¡Compartir en Facebook!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+
+$(document).ready(function(){
+
+	$('#share').modal('show');
+
+});
+
+</script>
+
+<% } %>
+
+<% } %>
+<!-- Share -->

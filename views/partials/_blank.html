@@ -1,0 +1,23 @@
+<!-- Blank -->
+<% if(source === "facebook"){ %>
+
+<script>
+
+$(document).ready(function(){
+
+	$('a').each(function(){
+
+		var $this = $(this);
+		var href = $this.attr('href');
+
+		$this.attr('target', '_blank');
+		$this.attr('href', '<%= config.app.url %>' + href);
+
+	});
+
+});
+
+</script>
+
+<% } %>
+<!-- Blank -->

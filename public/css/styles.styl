@@ -1,0 +1,166 @@
+@import 'nib';
+
+//Base
+body{
+	font-size: 18px;
+}
+
+//Slider
+#owl-demo {
+
+	.item{
+		border-radius: 3px;
+		text-align: center;
+	}
+
+}
+
+//Items
+.thumbnail{
+	position: relative;
+
+	&:hover{
+		text-decoration: none;
+	}
+
+	h3{
+		margin: 0;
+	}
+
+	.caption{
+
+		p{
+			overflow:hidden;
+			white-space:nowrap;
+			-ms-text-overflow:ellipsis;
+			text-overflow:ellipsis;
+			width:100%;			
+		}
+
+	}
+
+	.label{
+		position: absolute;
+		width: 100%;
+		top: 55%;
+		left: 0;
+		font-size: 16px;
+		border-radius: 0;
+	}
+
+}
+
+//Comments
+.fb-comments, .fb-like-box{
+	width: 100% !important;
+
+	iframe[style]{
+		width: 100% !important;
+	}
+
+	span{
+		width: 100% !important;
+	}
+
+	iframe span[style]{
+		width: 100% !important;
+	}
+
+	iframe{
+		background-color: #FFF;
+		padding: 15px;
+		border-radius: 5px;
+	}
+
+}
+
+//Ribbon
+.ribbon-wrapper {
+	width: 85px;
+	height: 88px;
+	overflow: hidden;
+	position: absolute;
+	top: -3px;
+	right: -3px;
+	z-index: 10;
+}
+
+.ribbon {
+	font: bold 15px Sans-Serif;
+	color: #333;
+	text-align: center;
+	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+	transform: rotate(45deg);
+	position: relative;
+	padding: 7px 0;
+	left: -5px;
+	top: 15px;
+	width: 120px;
+	background-color: #AD1D28; 
+	color: #FFF;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.3);	
+}
+
+.ribbon{
+
+	&:before, &:after{
+		content: "";
+		border-top:   3px solid #6e8900;   
+		border-left:  3px solid transparent;
+		border-right: 3px solid transparent;
+		position:absolute;
+		bottom: -3px;
+	}
+
+	&:before{
+		left: 0;
+	}
+
+	&:after{
+		right: 0;
+	}
+
+}
+
+//Other
+.panel-title{
+	font-size: 25px;
+}
+
+.list-group-item-heading{
+	font-family: "Cabin",Arial,sans-serif;
+	margin-bottom: 15px;
+}
+
+.navbar-brand{
+	font-size: 25px;
+}
+
+.jumbotron{
+	padding: 20px 30px;
+}
+
+.alert-item{
+	text-align: center;
+}
+
+.datepicker table{
+	color: #000;
+}
+
+.alert-item-success{
+	text-align: center;
+}
+
+.conditions li{
+	font-size: 13px;
+	list-style: decimal;
+}
+
+.alert-primary{
+	background-color: #AD1D28;
+}
+
+.poll iframe{
+	border-radius: 3px;
+}

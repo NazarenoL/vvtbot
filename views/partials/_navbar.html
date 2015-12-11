@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<div class="navbar navbar-default">
+
+	<div class="navbar-header">
+
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+		<a class="navbar-brand" href="/">Me voy a la m!3rd@!</a>
+
+	</div>
+
+	<div class="navbar-collapse collapse navbar-inverse-collapse">
+
+		<ul class="nav navbar-nav">
+
+			<li><a href="/">Inicio</a></li>
+
+			<li <% if(nav === 'items' || nav === 'item') { %>class="active"<% } %>><a href="/items">¡Cosas!</a></li>
+
+			<% if(user){ %>
+
+				<% if(user.isAdmin === true){ %>
+
+					<li <% if(nav === 'admin') { %>class="active"<% } %>><a href="/admin">Admin</a></li>
+
+				<% } %>
+
+			<% } %>
+
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right">
+
+			<li <% if(nav === 'faq') { %>class="active"<% } %>><a href="/faq">FAQ</a></li>
+
+			<li <% if(nav === 'about') { %>class="active"<% } %>><a href="/about">Sobre mi</a></li>
+
+			<% if(user){ %>
+
+				<li><a href="/logout">Salir</a></li>
+
+			<% } else { %>
+
+				<li <% if(nav === 'login') { %>class="active"<% } %>><a href="/login">Ingresar</a></li>
+
+			<% } %>
+
+		</ul>
+
+	</div>
+
+</div>
+<!-- Navbar -->

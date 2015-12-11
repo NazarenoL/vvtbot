@@ -1,0 +1,27 @@
+body{font-size:18px}
+#owl-demo .item{-webkit-border-radius:3px;border-radius:3px;text-align:center}
+.thumbnail{position:relative;}
+.thumbnail:hover{text-decoration:none}
+.thumbnail h3{margin:0}
+.thumbnail .caption p{overflow:hidden;white-space:nowrap;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;width:100%}
+.thumbnail .label{position:absolute;width:100%;top:55%;left:0;font-size:16px;-webkit-border-radius:0;border-radius:0}
+.fb-comments,.fb-like-box{width:100% !important;}
+.fb-comments iframe[style],.fb-like-box iframe[style]{width:100% !important}
+.fb-comments span,.fb-like-box span{width:100% !important}
+.fb-comments iframe span[style],.fb-like-box iframe span[style]{width:100% !important}
+.fb-comments iframe,.fb-like-box iframe{background-color:#fff;padding:15px;-webkit-border-radius:5px;border-radius:5px}
+.ribbon-wrapper{width:85px;height:88px;overflow:hidden;position:absolute;top:-3px;right:-3px;z-index:10}
+.ribbon{font:bold 15px Sans-Serif;color:#333;text-align:center;text-shadow:rgba(255,255,255,0.5) 0 1px 0;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);position:relative;padding:7px 0;left:-5px;top:15px;width:120px;background-color:#ad1d28;color:#fff;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.3);box-shadow:0 0 3px rgba(0,0,0,0.3)}
+.ribbon:before,.ribbon:after{content:"";border-top:3px solid #6e8900;border-left:3px solid transparent;border-right:3px solid transparent;position:absolute;bottom:-3px}
+.ribbon:before{left:0}
+.ribbon:after{right:0}
+.panel-title{font-size:25px}
+.list-group-item-heading{font-family:"Cabin",Arial,sans-serif;margin-bottom:15px}
+.navbar-brand{font-size:25px}
+.jumbotron{padding:20px 30px}
+.alert-item{text-align:center}
+.datepicker table{color:#000}
+.alert-item-success{text-align:center}
+.conditions li{font-size:13px;list-style:decimal}
+.alert-primary{background-color:#ad1d28}
+.poll iframe{-webkit-border-radius:3px;border-radius:3px}
