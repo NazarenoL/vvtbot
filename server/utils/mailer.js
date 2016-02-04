@@ -20,7 +20,7 @@ module.exports.send = function(itemId, itemType, facebookId, request, config) {
 	}
 
 	var mailOptions = {
-		from: "Me voy a la m!3rd@! <mevoyala@gmail.com>",
+		from: "Naza se toma el palo <nazarenolorenzo@gmail.com>",
 		to: config.app.adminEmail,
 		subject: subject,
 		html: [

@@ -2,7 +2,8 @@
   "name": "mevoyalamierda",
   "version": "0.0.1",
   "authors": [
-    "Leandro D'Onofrio <leandrodonofrio@gmail.com>"
+    "Leandro D'Onofrio <leandrodonofrio@gmail.com>",
+    "Nazareno Lorenzo <nazarenolorenzo@gmail.com>"
   ],
   "description": "mevoyalamierda.com",
   "main": "server.js",
@@ -19,7 +20,7 @@
   "dependencies": {
     "owlcarousel": "~1.3.1",
     "bootstrap-datepicker": "~1.2.0",
-    "bootswatch": "~3.0.3+1",
+    "bootswatch": "4",
     "masonry": "~3.1.3",
     "imagesloaded": "~3.0.4"
   }

@@ -33,6 +33,7 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
         if (err) return request.reply(Hapi.error.internal('Internal MongoDB error', err));
 
         //Flag to know if the user is administrator
+        console.log(profile.id);
         if(config.app.admin === profile.id){
 
             profile.isAdmin = true;
