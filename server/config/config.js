@@ -61,8 +61,8 @@ module.exports = {
 			partialsPath: "./views/partials/"
 		},
 		app:{
-			url: "http://mevoyalamierda.com",
-			secureUrl: "https://mevoyalamierda.herokuapp.com",
+			url: "https://guarded-peak-28259.herokuapp.com",
+			secureUrl: "https://guarded-peak-28259.herokuapp.com",
 			"public": "./public/",
 			filepicker: "", //Set filepicker ID
 			admin: "", //Set FB admin ID
