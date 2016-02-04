@@ -44,7 +44,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: "mongodb://localhost:27017/mevoyala-dev"
+				url: "mongodb://met0m0elp4:wDXkgDKm@ds043694.mongolab.com:43694/heroku_z2qtb9j6" //Set Mongo connection URI
 			}
 
 		}
@@ -64,14 +64,14 @@ module.exports = {
 			url: "https://guarded-peak-28259.herokuapp.com",
 			secureUrl: "https://guarded-peak-28259.herokuapp.com",
 			"public": "./public/",
-			filepicker: "", //Set filepicker ID
-			admin: "", //Set FB admin ID
-			adminEmail: "", //Set FB admin email
+			filepicker: "A1hkdyROtQyglnkdJVlRKz", //Set filepicker ID
+			admin: "10153095855612364", //Set FB admin ID
+			adminEmail: "nazarenolorenzo@gmail.com", //Set FB admin email
 			smtp: {
 				service: "Gmail",
 				auth: {
-					user: "", //Set auth
-					pass: "" //Set pass
+					user: "nazarenolorenzo@gmail.com", //Set auth
+					pass: "002honeR" //Set pass
 				}
 			}
 		},
