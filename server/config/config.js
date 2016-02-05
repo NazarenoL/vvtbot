@@ -44,12 +44,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: process.env.MONGOLAB_URI, //Set Mongo connection URI
-				settings: {
-					db: {
-						native_parser: false         
-					}
-				} 
+				url: process.env.MONGOLAB_URI //Set Mongo connection URI
 			}
 
 		}
@@ -100,12 +95,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: process.env.MONGOLAB_URI, //Set Mongo connection URI,
-				settings: {
-					db: {
-						native_parser: false         
-					}
-				} 
+				url: process.env.MONGOLAB_URI //Set Mongo connection URI
 			}
 
 		}
