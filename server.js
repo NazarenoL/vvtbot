@@ -14,6 +14,7 @@ server.pack.allow({ ext: true }).require(config.plugins, function (err) {
 
 });
 
+console.log(server.plugins['hapi-mongodb'].url);
 //Passport configuration
 var Passport = server.plugins.travelogue.passport;
 
