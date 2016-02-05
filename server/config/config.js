@@ -44,7 +44,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: "mongodb://met0m0elp4:wDXkgDKm@ds043694.mongolab.com:43694/heroku_z2qtb9j6" //Set Mongo connection URI
+				url: process.env.MONGOLAB_URI //Set Mongo connection URI
 			}
 
 		}
@@ -95,7 +95,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: "mongodb://met0m0elp4:wDXkgDKm@ds043694.mongolab.com:43694/heroku_z2qtb9j6" //Set Mongo connection URI
+				url: process.env.MONGOLAB_URI //Set Mongo connection URI
 			}
 
 		}
