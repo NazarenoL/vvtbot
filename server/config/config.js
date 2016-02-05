@@ -39,8 +39,7 @@ module.exports = {
 				facebook: {
 					clientID: "919697918118494", //Set FB client ID
 					clientSecret: "d85e25bd510819b5d784e3a7e9ff97d8", //Set FB client secret
-					callbackURL: "http://localhost:3000/auth/facebook/callback",
-					testVar : "mongodb://localhost:27017/mevoyala-dev"
+					callbackURL: "http://localhost:3000/auth/facebook/callback"
 				}
 
 			},
@@ -91,8 +90,7 @@ module.exports = {
 				facebook: {
 					clientID: "919697918118494", //Set FB client ID
 					clientSecret: "d85e25bd510819b5d784e3a7e9ff97d8", //Set FB client secret
-					callbackURL: "http://mevoyalamierda.com/auth/facebook/callback",
-					testVar: process.env.MONGOLAB_URI
+					callbackURL: "http://mevoyalamierda.com/auth/facebook/callback"
 				}
 
 			},
