@@ -44,7 +44,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: process.env.MONGOLAB_URI //Set Mongo connection URI
+				url: "mongodb://localhost:27017/mevoyala-dev"
 			}
 
 		}
@@ -95,7 +95,7 @@ module.exports = {
 
 			},
 			'hapi-mongodb': {
-				url: process.env.MONGOLAB_URI //Set Mongo connection URI
+				url: process.env.MONGOLAB_URI //Set Mongo connection URI,
 			}
 
 		}
