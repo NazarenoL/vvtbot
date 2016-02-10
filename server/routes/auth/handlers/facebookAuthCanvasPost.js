@@ -2,8 +2,8 @@
 module.exports = function(server, request) {
 
   	server.passport.authenticate('facebook-canvas', {
-  		successRedirect: config.app.secureUrl + '/',
-        failureRedirect: config.app.secureUrl + '/auth/facebook-canvas/autologin' 
+  		successRedirect: server.settings.app.secureUrl + '/',
+        failureRedirect: server.settings.app.secureUrl + '/auth/facebook-canvas/autologin' 
     })(request);
 
 };
