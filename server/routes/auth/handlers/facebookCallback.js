@@ -15,12 +15,11 @@ console.log(referer);
 console.log("testa123");
 
 	server.passport.authenticate('facebook', {
-console.log("testa123v");
 		failureRedirect: server.settings.plugins.travelogue.urls.failureRedirect,
 		successRedirect: redirect,
 		failureFlash: true
-	})(request, function () {
-console.log("testa123c");
+	})(request, functiheron () {
+		console.log('testa123b');
 		return request.reply.redirect('/');
 	});
 
