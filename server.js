@@ -41,6 +41,7 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
 
             }
 
+            return done(null, profile);
         
         });
     }else{
