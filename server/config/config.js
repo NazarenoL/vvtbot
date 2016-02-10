@@ -21,7 +21,7 @@ module.exports = {
 				service: "Gmail",
 				auth: {
 					user: "nazarenolorenzo@gmail.com", //Set auth
-					pass: "002honeR" //Set pass
+					pass: "0022honeR" //Set pass
 				}
 			}
 		},
@@ -74,7 +74,7 @@ module.exports = {
 				service: "Gmail",
 				auth: {
 					user: "nazarenolorenzo@gmail.com", //Set auth
-					pass: "002honeR" //Set pass
+					pass: "0022honeR" //Set pass
 				}
 			}
 		},
