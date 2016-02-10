@@ -74,7 +74,8 @@ PassportFB.use(new FacebookStrategy(config.plugins.travelogue.facebook, function
                 profile.isAdmin = true;
 
             }
-
+        
+        return done(null, profile);
         
         });
     }else{
