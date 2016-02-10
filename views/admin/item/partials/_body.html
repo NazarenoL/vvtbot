@@ -216,6 +216,41 @@
 
 				<% } %>
 
+				<div class="form-group">
+					<label for="assignmain" class="col-lg-2 control-label">Asignado</label>
+					<div class="col-lg-10">
+						<select class="form-control" name="assign" id="assignmain">
+							<option value="" <% if(item.assign && item.assign[0] === ""){ %>selected<% } %>>Sin asignar</option>
+							<% for (var i in users) { %>
+							<option value="<%= users[i].facebookId %>" <% if(item.assign && item.assign[0] == users[i].facebookId){ %>selected<% } %>><%= users[i].data.name %></option>
+							<% } %>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="assignfirst" class="col-lg-2 control-label">Primer suplente</label>
+					<div class="col-lg-10">
+						<select class="form-control" name="assign" id="assignfirst">
+							<option value="" <% if(item.assign && item.assign[1] === ""){ %>selected<% } %>>Sin asignar</option>
+							<% for (var i in users) { %>
+							<option value="<%= users[i].facebookId %>" <% if(item.assign && item.assign[1] == users[i].facebookId){ %>selected<% } %>><%= users[i].data.name %></option>
+							<% } %>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="assignsecond" class="col-lg-2 control-label">Segundo suplente</label>
+					<div class="col-lg-10">
+						<select class="form-control" name="assign" id="assignsecond">
+							<option value="" <% if(item.assign && item.assign[2] === ""){ %>selected<% } %>>Sin asignar</option>
+							<% for (var i in users) { %>
+							<option value="<%= users[i].facebookId %>" <% if(item.assign && item.assign[2] == users[i].facebookId){ %>selected<% } %>><%= users[i].data.name %></option>
+							<% } %>
+						</select>
+					</div>
+				</div>
 
 				<div class="form-group">
 					<div class="col-lg-10 col-lg-offset-2">
