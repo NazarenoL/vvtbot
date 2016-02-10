@@ -11,6 +11,7 @@ module.exports = {
 		},
 		app:{
 			url: "http://localhost:3000",
+			secureDomain: "localhost",
 			secureUrl: "https://localhost:3000",
 			"public": "./public/",
 			filepicker: "A1hkdyROtQyglnkdJVlRKz", //Set filepicker ID
@@ -63,6 +64,7 @@ module.exports = {
 		},
 		app:{
 			url: "https://guarded-peak-28259.herokuapp.com",
+			secureDomain: "guarded-peak-28259.herokuapp.com",
 			secureUrl: "https://guarded-peak-28259.herokuapp.com",
 			"public": "./public/",
 			filepicker: "A1hkdyROtQyglnkdJVlRKz", //Set filepicker ID

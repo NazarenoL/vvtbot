@@ -7,7 +7,7 @@
 			placement: 'top',
 			html: true
 		});
-		if(document.domain == '<%= config.app.secureUrl %>' ){
+		if(document.domain == '<%= config.app.secureDomain %>' ){
 			$("#logoutButton").hide();
 		}
 	});
