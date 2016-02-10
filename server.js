@@ -20,6 +20,7 @@ var Passport = server.plugins.travelogue.passport;
 Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
 
     var db = server.plugins['hapi-mongodb'].db;
+    console.log(profile);console.log('testa')''
 
     //User informacion
     var user = {

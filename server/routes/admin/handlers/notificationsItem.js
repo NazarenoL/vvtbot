@@ -24,7 +24,6 @@ module.exports = function(server, request) {
 				async.each(interested, function(intd, callback){
 
 					interestedUsers.push(intd.facebookId);
-
 					callback();
 
 				}, function(err){
