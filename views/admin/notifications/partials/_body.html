@@ -47,7 +47,7 @@
 
 									<div class="user media" id="user-<%= users[i].facebookId %>" data-user='{"facebookId": "<%= users[i].facebookId %>"}'>
 										<a class="pull-left" target="_blank" href="/admin/user?id=<%= users[i].facebookId %>">
-											<img class="media-object" src="http://graph.facebook.com/<%= users[i].data.username %>/picture" alt="<%= users[i].data.name %>">
+											<img class="media-object" src="http://graph.facebook.com/<%= users[i].facebookId %>/picture" alt="<%= users[i].data.name %>">
 										</a>
 										<div class="media-body">
 											<h4 class="media-heading"><%= users[i].data.name %></h4>

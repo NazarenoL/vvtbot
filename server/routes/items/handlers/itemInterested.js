@@ -16,8 +16,6 @@ module.exports = function(server, request) {
 
 	var reply = function(itemId){
 
-		mailer.send(itemId, request.payload.type, facebookId, request, server.settings);
-
 		request.session.flash("interested-" + request.payload.type, "success");
 
 		request.reply.redirect('/item?id=' + itemId);
