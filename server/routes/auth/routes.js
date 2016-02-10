@@ -33,6 +33,27 @@ module.exports = function(server) {
 			handler: function(request){ handlers["facebookAuth"](server, request); }
 		}
 	});
+	server.addRoute({
+		method: 'GET',
+		path: '/auth/facebook-canvas',
+		config: {
+			handler: function(request){ handlers["facebookAuthCanvas"](server, request); }
+		}
+	});
+	server.addRoute({
+		method: 'POST',
+		path: '/auth/facebook-canvas',
+		config: {
+			handler: function(request){ handlers["facebookAuthCanvasPost"](server, request); }
+		}
+	});
+	server.addRoute({
+		method: 'GET',
+		path: '/auth/facebook-canvas/autologin',
+		config: {
+			handler: function(request){ handlers["facebookAuthCanvasAutologin"](server, request); }
+		}
+	});
 
 	//Facebook callback
 	server.addRoute({

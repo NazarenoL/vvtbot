@@ -2,7 +2,7 @@ var Hapi                = require('hapi');
 var env                 = process.env['NODE_ENV'] === undefined ? 'development' : process.env['NODE_ENV'];
 var config              = require("./server/config/config")[env];
 var port                = (Number(process.env.PORT) || 3000);
-var FacebookStrategy    = require('passport-facebook').Strategy;
+var FacebookStrategy    = require('passport-facebook-canvas').Strategy;
 var server              = new Hapi.Server('0.0.0.0', port, config);
 
 //Hapi plugins

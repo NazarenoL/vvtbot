@@ -4,18 +4,19 @@
   "version": "0.0.0",
   "description": "mevoyalamierda.com",
   "dependencies": {
+    "async": "1.5.0",
+    "ejs": "0.8.8",
+    "facebook-notification": "0.1.1",
     "grunt": "0.4.x",
     "hapi": "1.20.0",
-    "travelogue": "0.4.4",
-    "passport": "0.3.2",
-    "yar": "0.4.1",
-    "passport-facebook": "1.0.3",
     "hapi-mongodb": "git+https://github.com/NazarenoL/hapi-mongodb.git",
-    "async": "1.5.0",
     "nodemailer": "0.7.1",
+    "passport": "0.3.2",
+    "passport-facebook": "1.0.3",
+    "passport-facebook-canvas": "0.0.3",
     "q": "0.9.7",
-    "facebook-notification": "0.1.1",
-    "ejs": "0.8.8"
+    "travelogue": "0.4.4",
+    "yar": "0.4.1"
   },
   "scripts": {
     "start": "node server.js"
