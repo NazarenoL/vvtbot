@@ -45,6 +45,8 @@ Passport.use(new FacebookStrategyCanvas(config.plugins.travelogue.facebook, func
             return done(null, profile);
         
         });
+    }else{
+        return done(null, profile);
     }
 
 }));
@@ -72,9 +74,10 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
 
             }
 
-            return done(null, profile);
         
         });
+    }else{
+        return done(null, profile);
     }
 
 }));
