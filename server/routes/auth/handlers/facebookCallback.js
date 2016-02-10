@@ -18,7 +18,7 @@ console.log("testa123");
 		failureRedirect: server.settings.plugins.travelogue.urls.failureRedirect,
 		successRedirect: redirect,
 		failureFlash: true
-	})(request, functiheron () {
+	})(request, function () {
 		console.log('testa123b');
 		return request.reply.redirect('/');
 	});
