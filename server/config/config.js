@@ -94,7 +94,7 @@ module.exports = {
 					profileFields: ['displayName','id', 'email', 'picture.type(normal)'],
 					clientID: "919697918118494", //Set FB client ID
 					clientSecret: "d85e25bd510819b5d784e3a7e9ff97d8", //Set FB client secret
-					callbackURL: "https://guarded-peak-28259.herokuapp.com/auth/facebook/callback"
+					callbackURL: "http://metomoelpalo.nazarenolorenzo.com.ar/auth/facebook/callback"
 				}
 
 			},

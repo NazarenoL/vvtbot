@@ -9,6 +9,7 @@
 		});
 		if(document.domain == '<%= config.app.secureDomain %>' ){
 			$("#logoutButton").hide();
+			$("#loginButton").attr('href','/auth/facebook-canvas');
 		}
 	});
 </script>
