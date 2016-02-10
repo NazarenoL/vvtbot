@@ -16,9 +16,10 @@ server.pack.allow({ ext: true }).require(config.plugins, function (err) {
 });
 
 //Passport configuration
-var Passport = server.plugins.travelogue.passport;
+var PassportFBCanvas = server.plugins.travelogue.passport;
+var PassportFB = server.plugins.travelogue.passport;
 
-Passport.use(new FacebookStrategyCanvas(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
+PassportFBCanvas.use(new FacebookStrategyCanvas(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
 
     var db = server.plugins['hapi-mongodb'].db;
 
@@ -50,7 +51,7 @@ Passport.use(new FacebookStrategyCanvas(config.plugins.travelogue.facebook, func
     }
 
 }));
-Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
+PassportFB.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
 
     var db = server.plugins['hapi-mongodb'].db;
 
@@ -82,16 +83,24 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
 
 }));
 
-Passport.serializeUser(function (user, done) {
+PassportFBCanvas.serializeUser(function (user, done) {
     done(null, user);
 });
 
-Passport.deserializeUser(function (obj, done) {
+PassportFBCanvas.deserializeUser(function (obj, done) {
+    done(null, obj);
+});
+PassportFB.serializeUser(function (user, done) {
+    done(null, user);
+});
+
+PassportFB.deserializeUser(function (obj, done) {
     done(null, obj);
 });
 
 //Save the reference of passport to use across the app
-server.passport = Passport;
+server.passportfbcanvas = PassportFBCanvas;
+server.passportfb = PassportFB;
 
 //Routes
 require('./server/routes.js')(server);

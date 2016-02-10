@@ -14,7 +14,7 @@ console.log(redirect);
 console.log(referer);
 console.log("testa123");
 
-	server.passport.authenticate('facebook', {
+	server.passportfb.authenticate('facebook', {
 		failureRedirect: server.settings.plugins.travelogue.urls.failureRedirect,
 		successRedirect: redirect,
 		failureFlash: true
