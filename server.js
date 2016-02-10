@@ -28,6 +28,24 @@ Passport.use(new FacebookStrategyCanvas(config.plugins.travelogue.facebook, func
         data: profile._json
     };
 
+    if(typeof profile['name'] != 'undefined' && profile['name'].length > 1){
+
+        //Save the user in the DB
+        db.collection('users').update({facebookId: profile.id}, user, {safe: true, upsert:true}, function(err) {
+
+            if (err) return request.reply(Hapi.error.internal('Internal MongoDB error', err));
+
+            //Flag to know if the user is administrator
+            if(config.app.admin === profile.id){
+
+                profile.isAdmin = true;
+
+            }
+
+            return done(null, profile);
+        
+        });
+    }
 
 }));
 Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (accessToken, refreshToken, profile, done) {
@@ -40,21 +58,24 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
         data: profile._json
     };
 
-    //Save the user in the DB
-    db.collection('users').update({facebookId: profile.id}, user, {safe: true, upsert:true}, function(err) {
+    if(typeof profile['name'] != 'undefined' && profile['name'].length > 1){
 
-        if (err) return request.reply(Hapi.error.internal('Internal MongoDB error', err));
+        //Save the user in the DB
+        db.collection('users').update({facebookId: profile.id}, user, {safe: true, upsert:true}, function(err) {
 
-        //Flag to know if the user is administrator
-        if(config.app.admin === profile.id){
+            if (err) return request.reply(Hapi.error.internal('Internal MongoDB error', err));
 
-            profile.isAdmin = true;
+            //Flag to know if the user is administrator
+            if(config.app.admin === profile.id){
 
-        }
+                profile.isAdmin = true;
 
-        return done(null, profile);
-    
-    });
+            }
+
+            return done(null, profile);
+        
+        });
+    }
 
 }));
 
