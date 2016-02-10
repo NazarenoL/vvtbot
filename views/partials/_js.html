@@ -1,9 +1,14 @@
 <script src="/bower/jquery/jquery.min.js"></script>
 <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-	$('a[data-toggle="tooltip"]').tooltip({
-	    animated: 'fade',
-	    placement: 'top',
-	    html: true
+	$().ready(function(){
+		$('a[data-toggle="tooltip"]').tooltip({
+			animated: 'fade',
+			placement: 'top',
+			html: true
+		});
+		if(document.domain == '<%= config.app.secureUrl %>' ){
+			$("#logoutButton").hide();
+		}
 	});
 </script>
