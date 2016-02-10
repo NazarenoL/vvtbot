@@ -60,9 +60,9 @@ Passport.use(new FacebookStrategy(config.plugins.travelogue.facebook, function (
         data: profile._json
     };
 
-    console.log(profile['name']);
-    console.log(profile['name'].length);
-    if(typeof profile['name'] != 'undefined' && profile['name'].length > 1){
+    console.log(profile['displayName']);
+    console.log(profile['displayName'].length);
+    if(typeof profile['displayName'] != 'undefined' && profile['displayName'].length > 1){
 
         //Save the user in the DB
         db.collection('users').update({facebookId: profile.id}, user, {safe: true, upsert:true}, function(err) {
