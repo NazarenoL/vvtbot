@@ -16,6 +16,15 @@ module.exports = function(server) {
 		}
 	});
 
+	//Home
+	server.addRoute({
+		method: 'POST',
+		path: '/',
+		config: {
+			handler: function(request){ handlers["home"](server, request); }
+		}
+	});
+
 	//FAQ
 	server.addRoute({
 		method: 'GET',
