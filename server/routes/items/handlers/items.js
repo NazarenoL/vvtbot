@@ -3,7 +3,7 @@ module.exports = function(server, request) {
 
 	var db = server.plugins['hapi-mongodb'].db;
 
-	db.collection('items').find({active: 'on'}).sort( { closed: 1 } ).toArray(function(err, items) {
+	db.collection('items').find({active: 'on'}).sort( { closed: -1 } ).toArray(function(err, items) {
 
 		if (err) return request.reply(Hapi.error.internal('Internal MongoDB error', err));
 
