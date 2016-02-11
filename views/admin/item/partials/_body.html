@@ -141,7 +141,7 @@
 						<select class="form-control" id="usage" name="usage">
 							<option value="0" <% if(item.usage === '0'){ %>selected<% } %>>Sin uso / Nuevo</option>
 							<option value="1" <% if(item.usage === '1'){ %>selected<% } %>>Usado casi nunca</option>
-							<option value="2" <% if(item.usage === '2'){ %>selected<% } %>>Usado ocacionalmente</option>
+							<option value="2" <% if(item.usage === '2'){ %>selected<% } %>>Usado ocasionalmente</option>
 							<option value="3" <% if(item.usage === '3'){ %>selected<% } %>>Usado regularmente</option>
 							<option value="4" <% if(item.usage === '4'){ %>selected<% } %>>Muy usado</option>
 						</select>
@@ -199,7 +199,7 @@
 											<div class="media-body">
 												<h4 class="media-heading"><%= users[j].data.name %></h4>
 												<p><%= users[j].data.email %></p>
-												<a class="btn btn-danger btn-xs delete-interested" data-interested='{"facebookId": "<%= users[j].facebookId %>", "itemId": ""}'>¿Eliminar?</a>
+												<a class="btn btn-danger btn-xs delete-interested" data-interested='{"facebookId": "<%= users[j].facebookId %>", "itemId": "<%= item.id %>"}'>¿Eliminar?</a>
 											</div>
 										</div>
 									<% } %>
