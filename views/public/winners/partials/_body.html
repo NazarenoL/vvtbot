@@ -18,7 +18,7 @@
 			<% if(item.assign[0] === users[j].facebookId){ %>
 
 				<div class="text-center">
-					<img class="text-center" src="https://graph.facebook.com/<%= users[j].data.username %>/picture?type=large" alt="<%= users[j].data.name %>">
+					<img class="text-center" src="https://graph.facebook.com/<%= users[j].facebookId %>/picture?type=large" alt="<%= users[j].data.name %>">
 					<h2><%= users[j].data.name %></h2>
 				</div>
 
@@ -28,7 +28,7 @@
 
 	</div>
 
-	<p class="text-center">¡Te estaré contactando para arreglar los detalles!</p>
+	<p class="text-center">¡Contactame cuanto antes para arreglar los detalles!</p>
 
 	<hr>
 
@@ -47,7 +47,7 @@
 		<% if(item.assign[1] === users[j].facebookId){ %>
 
 			<div class="text-center">
-				<img class="text-center" src="https://graph.facebook.com/<%= users[j].data.username %>/picture?type=normal" alt="<%= users[j].data.name %>">
+				<img class="text-center" src="https://graph.facebook.com/<%= users[j].facebookId %>/picture?type=normal" alt="<%= users[j].data.name %>">
 				<h3><%= users[j].data.name %></h3>
 			</div>
 
@@ -72,7 +72,7 @@
 		<% if(item.assign[2] === users[j].facebookId){ %>
 
 			<div class="text-center">
-				<img class="text-center" src="https://graph.facebook.com/<%= users[j].data.username %>/picture?type=small" alt="<%= users[j].data.name %>">
+				<img class="text-center" src="https://graph.facebook.com/<%= users[j].facebookId %>/picture?type=small" alt="<%= users[j].data.name %>">
 				<h3><%= users[j].data.name %></h3>
 			</div>
 
