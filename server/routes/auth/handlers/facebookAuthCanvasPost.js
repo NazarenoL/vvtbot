@@ -1,9 +1,9 @@
 
 module.exports = function(server, request) {
 
-	var urlRedirect= server.settins.app.secureUrl + '/';
+	var urlRedirect= server.settings.app.secureUrl + '/';
 	if(typeof request.query.page != undefined && request.query.page =='winners'){
-		urlRedirect = server.settins.app.secureUrl + '/winners?id=' + request.query.id;
+		urlRedirect = server.settings.app.secureUrl + '/winners?id=' + request.query.id;
 	}
 
   	server.passportfbcanvas.authenticate('facebook-canvas', {
