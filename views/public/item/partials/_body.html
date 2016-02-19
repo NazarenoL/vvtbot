@@ -1,7 +1,7 @@
 <% if(item.assign[0]){ %>
 
 	<div class="alert alert-primary alert-item alert-dismissable">
-		<strong>¡Este item ya se lo llevó alguien!</strong>
+		<strong>¡Este item ya se lo llevó alguien! <a href="/winners?id=<%= item._id %>">Averigua quien!</a></strong>
 	</div>
 
 <% } else { %>
@@ -22,19 +22,19 @@
 
 	<% } %>
 
-<% } %>
 
-<% if(item.type === "gift") { %>
+	<% if(item.type === "gift") { %>
 
-	<div class="alert alert-success alert-item alert-dismissable">
-		<strong>¡Este item se regala!</strong>
-		<ul>
-			<li>Si te interesa, hacé click en el botón "Lo quiero" y quedas automáticamente agregado en la lista de interesados!</li>
-			<li>Al llegar a la fecha limite (o a un máximo de <%= item.limit %> personas) el sistema hace un sorteo para elegir quien se lo queda. En caso que te lo quedes vos, te estaré contactando</li>
-			<li>Por favor, lee atentamente las condiciones y si tenes alguna pregunta no dudes en dejar un comentario o <a href="/about">contactarme</a>!</li>
-		</ul>
-	</div>
+		<div class="alert alert-success alert-item alert-dismissable">
+			<strong>¡Este item se regala!</strong>
+			<ul>
+				<li>Si te interesa, hacé click en el botón "Lo quiero" y quedas automáticamente agregado en la lista de interesados!</li>
+				<li>Al llegar a la fecha limite (o a un máximo de <%= item.limit %> personas) el sistema hace un sorteo para elegir quien se lo queda. En caso que te lo quedes vos, te estaré contactando</li>
+				<li>Por favor, lee atentamente las condiciones y si tenes alguna pregunta no dudes en dejar un comentario o <a href="/about">contactarme</a>!</li>
+			</ul>
+		</div>
 
+	<% } %>
 <% } %>
 
 <% if(item.type === "auction") { %>
@@ -287,9 +287,9 @@
 
 		<% } else { %>
 
-			<button type="button" class="btn btn-default btn-lg disabled">
-				<i class="fa fa-heart"></i> ¡Ya esta asignado a alguien! <i class="fa fa-heart"></i>
-			</button>
+			<a class="btn btn-default btn-lg" href="/winners?id=<%= item._id %>">
+				<i class="fa fa-heart"></i> ¡Ya esta asignado a alguien! Averigua quien!<i class="fa fa-heart"></i>
+			</a>
 
 		<% } %>
 
