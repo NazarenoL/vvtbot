@@ -13,7 +13,7 @@ Follow the [walk-through](https://developers.facebook.com/docs/messenger-platfor
 
 ## Setup
 
-Set the values in `config/default.json` before running the sample. Descriptions of each parameter can be found in `app.js`. Alternatively, you can set the corresponding environment variables as defined in `app.js`.
+Set the values in `config/default.json` before running the sample. Descriptions of each parameter can be found in `app-basic.js`. Alternatively, you can set the corresponding environment variables as defined in `app-basic.js`.
 
 Replace values for `APP_ID` and `PAGE_ID` in `public/index.html`.
 
@@ -25,7 +25,7 @@ You can run this example on a cloud service provider like Heroku, Google Cloud P
 
 ## Webhook
 
-All webhook code is in `app.js`. It is routed to `/webhook`. This project handles callbacks for authentication, messages, delivery confirmation and postbacks. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/webhook-reference).
+All webhook code is in `app-basic.js`. It is routed to `/webhook`. This project handles callbacks for authentication, messages, delivery confirmation and postbacks. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/webhook-reference).
 
 ## "Send to Messenger" and "Message Us" Plugin
 

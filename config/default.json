@@ -1,6 +1,6 @@
 {
     "appSecret": "c55f0128298d2f82b5aa38a058607566",
-    "pageAccessToken": "",
-    "validationToken": "",
-    "serverURL": ""
+    "pageAccessToken": "EAADZAIdPCKrYBALGGazyt5u7Qcox1dDIFHDZBHwfgs8Ex1fUFVoeAK1OrIYIZAl3tUAhxIA6qfrZBprRArXFZBwlEYQ5ZAr30sxQ6686HrljVM65SdDapbZBcHYCim6nxwvr7VAiVApyEPWZAfSVIERWuY7A2XnJZAzAmr0Smf0wgEwZDZD",
+    "validationToken": "a_la_grande_le_puse_cuca",
+    "serverURL": "https://guarded-peak-28259.herokuapp.com/webhook"
 }
