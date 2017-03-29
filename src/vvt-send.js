@@ -2,65 +2,6 @@
 
 var VvtSend = function () {};
 
-VvtSend.prototype.replyTextMessage = function (messageText, senderId) {
-    switch (messageText) {
-        // case 'image':
-        //     VvtSend.sendImageMessage(senderID);
-        //     break;
-        //
-        // case 'gif':
-        //     VvtSend.sendGifMessage(senderID);
-        //     break;
-        //
-        // case 'audio':
-        //     VvtSend.sendAudioMessage(senderID);
-        //     break;
-        //
-        // case 'video':
-        //     VvtSend.sendVideoMessage(senderID);
-        //     break;
-        //
-        // case 'file':
-        //     VvtSend.sendFileMessage(senderID);
-        //     break;
-        //
-        // case 'button':
-        //     VvtSend.sendButtonMessage(senderID);
-        //     break;
-        //
-        // case 'generic':
-        //     VvtSend.sendGenericMessage(senderID);
-        //     break;
-        //
-        // case 'receipt':
-        //     VvtSend.sendReceiptMessage(senderID);
-        //     break;
-        //
-        // case 'quick reply':
-        //     VvtSend.sendQuickReply(senderID);
-        //     break;
-        //
-        // case 'read receipt':
-        //     VvtSend.sendReadReceipt(senderID);
-        //     break;
-        //
-        // case 'typing on':
-        //     VvtSend.sendTypingOn(senderID);
-        //     break;
-        //
-        // case 'typing off':
-        //     VvtSend.sendTypingOff(senderID);
-        //     break;
-        //
-        // case 'account linking':
-        //     VvtSend.sendAccountLinking(senderID);
-        //     break;
-
-        default:
-            VvtSend.sendOptionsMessage(senderId, messageText);
-    }
-};
-
 // /*
 //  * Send audio using the Send API.
 //  *
@@ -149,19 +90,69 @@ VvtSend.prototype.sendTextMessage = function (recipientId, messageText) {
  * Sends a message with all the available options.
  */
 VvtSend.prototype.sendOptionsMessage = function (recipientId) {
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            text: 'Che! Esta es una versión de prueba y no pude entender lo que me dijiste.' +
-            'Por ahora nada mas soporto que me preguntes informacion de visas. Si queres preguntame sobre eso.',
-            metadata: "DEVELOPER_DEFINED_METADATA"
-        }
-    };
-
-    callSendAPI(messageData);
+    VvtSend.sendTextMessage(recipientId, 'Che! Esta es una versión de prueba y no pude entender lo que me dijiste.' +
+        'Por ahora nada mas soporto que me preguntes informacion de visas. Si queres preguntame sobre eso.');
 }
+
+VvtSend.prototype.replyTextMessage = function (messageText, senderId) {
+    switch (messageText) {
+        // case 'image':
+        //     VvtSend.sendImageMessage(senderID);
+        //     break;
+        //
+        // case 'gif':
+        //     VvtSend.sendGifMessage(senderID);
+        //     break;
+        //
+        // case 'audio':
+        //     VvtSend.sendAudioMessage(senderID);
+        //     break;
+        //
+        // case 'video':
+        //     VvtSend.sendVideoMessage(senderID);
+        //     break;
+        //
+        // case 'file':
+        //     VvtSend.sendFileMessage(senderID);
+        //     break;
+        //
+        // case 'button':
+        //     VvtSend.sendButtonMessage(senderID);
+        //     break;
+        //
+        // case 'generic':
+        //     VvtSend.sendGenericMessage(senderID);
+        //     break;
+        //
+        // case 'receipt':
+        //     VvtSend.sendReceiptMessage(senderID);
+        //     break;
+        //
+        // case 'quick reply':
+        //     VvtSend.sendQuickReply(senderID);
+        //     break;
+        //
+        // case 'read receipt':
+        //     VvtSend.sendReadReceipt(senderID);
+        //     break;
+        //
+        // case 'typing on':
+        //     VvtSend.sendTypingOn(senderID);
+        //     break;
+        //
+        // case 'typing off':
+        //     VvtSend.sendTypingOff(senderID);
+        //     break;
+        //
+        // case 'account linking':
+        //     VvtSend.sendAccountLinking(senderID);
+        //     break;
+
+        default:
+            VvtSend.sendOptionsMessage(senderId, messageText);
+    }
+};
+
 //
 // /*
 //  * Send a button message using the Send API.
