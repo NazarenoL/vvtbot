@@ -449,4 +449,4 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //     callSendAPI(messageData);
 // }
 
-exports.VvtSend = new self();
+exports = new self();
