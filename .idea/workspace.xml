@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf5cf0c-1aa1-48e4-bf46-4e77d7796694" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vvt-send.js" afterPath="$PROJECT_DIR$/src/vvt-send.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -29,8 +30,8 @@
       <file leaf-file-name="vvt-send.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vvt-send.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="160" column="11" lean-forward="false" selection-start-line="160" selection-start-column="3" selection-end-line="160" selection-end-column="11" />
+            <state relative-caret-position="435">
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -85,12 +86,16 @@
       <find>app =</find>
       <find>sendTextMessage</find>
       <find>send</find>
-      <find>callSendApi</find>
       <find>replyTextMessage</find>
       <find>vvtsend</find>
       <find>sendtextmessage</find>
       <find>sendOptionsMessage</find>
       <find>vvtsend.</find>
+      <find>sendimagemessage</find>
+      <find>config</find>
+      <find>glob</find>
+      <find>callSendApi</find>
+      <find>callSendAPI</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,12 +267,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490808439225</updated>
-      <workItem from="1490808440508" duration="5698000" />
+      <workItem from="1490808440508" duration="6118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5698000" />
+    <option name="totallyTimeSpent" value="6118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -356,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -366,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vvt-send.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="160" column="11" lean-forward="false" selection-start-line="160" selection-start-column="3" selection-end-line="160" selection-end-column="11" />
+        <state relative-caret-position="435">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>
