@@ -1,63 +1,63 @@
 'use strict';
 
-var self = function () {};
+var VvtSend = function () {};
 
-self.prototype.replyTextMessage = function (messageText, senderId) {
+VvtSend.prototype.replyTextMessage = function (messageText, senderId) {
     switch (messageText) {
         // case 'image':
-        //     self.sendImageMessage(senderID);
+        //     VvtSend.sendImageMessage(senderID);
         //     break;
         //
         // case 'gif':
-        //     self.sendGifMessage(senderID);
+        //     VvtSend.sendGifMessage(senderID);
         //     break;
         //
         // case 'audio':
-        //     self.sendAudioMessage(senderID);
+        //     VvtSend.sendAudioMessage(senderID);
         //     break;
         //
         // case 'video':
-        //     self.sendVideoMessage(senderID);
+        //     VvtSend.sendVideoMessage(senderID);
         //     break;
         //
         // case 'file':
-        //     self.sendFileMessage(senderID);
+        //     VvtSend.sendFileMessage(senderID);
         //     break;
         //
         // case 'button':
-        //     self.sendButtonMessage(senderID);
+        //     VvtSend.sendButtonMessage(senderID);
         //     break;
         //
         // case 'generic':
-        //     self.sendGenericMessage(senderID);
+        //     VvtSend.sendGenericMessage(senderID);
         //     break;
         //
         // case 'receipt':
-        //     self.sendReceiptMessage(senderID);
+        //     VvtSend.sendReceiptMessage(senderID);
         //     break;
         //
         // case 'quick reply':
-        //     self.sendQuickReply(senderID);
+        //     VvtSend.sendQuickReply(senderID);
         //     break;
         //
         // case 'read receipt':
-        //     self.sendReadReceipt(senderID);
+        //     VvtSend.sendReadReceipt(senderID);
         //     break;
         //
         // case 'typing on':
-        //     self.sendTypingOn(senderID);
+        //     VvtSend.sendTypingOn(senderID);
         //     break;
         //
         // case 'typing off':
-        //     self.sendTypingOff(senderID);
+        //     VvtSend.sendTypingOff(senderID);
         //     break;
         //
         // case 'account linking':
-        //     self.sendAccountLinking(senderID);
+        //     VvtSend.sendAccountLinking(senderID);
         //     break;
 
         default:
-            self.sendOptionsMessage(senderId, messageText);
+            VvtSend.sendOptionsMessage(senderId, messageText);
     }
 };
 
@@ -65,7 +65,7 @@ self.prototype.replyTextMessage = function (messageText, senderId) {
 //  * Send audio using the Send API.
 //  *
 //  */
-// self.prototype.sendAudioMessage = function (recipientId) {
+// VvtSend.prototype.sendAudioMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -87,7 +87,7 @@ self.prototype.replyTextMessage = function (messageText, senderId) {
 //  * Send a video using the Send API.
 //  *
 //  */
-// self.prototype.sendVideoMessage = function (recipientId) {
+// VvtSend.prototype.sendVideoMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -109,7 +109,7 @@ self.prototype.replyTextMessage = function (messageText, senderId) {
 //  * Send a file using the Send API.
 //  *
 //  */
-// self.prototype.sendFileMessage = function (recipientId) {
+// VvtSend.prototype.sendFileMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -131,7 +131,7 @@ self.prototype.replyTextMessage = function (messageText, senderId) {
 /*
  * Send a text message using the Send API.
  */
-self.prototype.sendTextMessage = function (recipientId, messageText) {
+VvtSend.prototype.sendTextMessage = function (recipientId, messageText) {
     var messageData = {
         recipient: {
             id: recipientId
@@ -148,7 +148,7 @@ self.prototype.sendTextMessage = function (recipientId, messageText) {
 /*
  * Sends a message with all the available options.
  */
-self.prototype.sendOptionsMessage = function (recipientId) {
+VvtSend.prototype.sendOptionsMessage = function (recipientId) {
     var messageData = {
         recipient: {
             id: recipientId
@@ -167,7 +167,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a button message using the Send API.
 //  *
 //  */
-// self.prototype.sendButtonMessage = function (recipientId) {
+// VvtSend.prototype.sendButtonMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -203,7 +203,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a Structured Message (Generic Message type) using the Send API.
 //  *
 //  */
-// self.prototype.sendGenericMessage = function (recipientId) {
+// VvtSend.prototype.sendGenericMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -254,7 +254,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a receipt message using the Send API.
 //  *
 //  */
-// self.prototype.sendReceiptMessage = function (recipientId) {
+// VvtSend.prototype.sendReceiptMessage = function (recipientId) {
 //     // Generate a random receipt ID as the API requires a unique ID
 //     var receiptId = "order" + Math.floor(Math.random()*1000);
 //
@@ -320,7 +320,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a message with Quick Reply buttons.
 //  *
 //  */
-// self.prototype.sendQuickReply = function (recipientId) {
+// VvtSend.prototype.sendQuickReply = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -354,7 +354,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a read receipt to indicate the message has been read
 //  *
 //  */
-// self.prototype.sendReadReceipt = function (recipientId) {
+// VvtSend.prototype.sendReadReceipt = function (recipientId) {
 //     console.log("Sending a read receipt to mark message as seen");
 //
 //     var messageData = {
@@ -371,7 +371,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Turn typing indicator on
 //  *
 //  */
-// self.prototype.sendTypingOn = function (recipientId) {
+// VvtSend.prototype.sendTypingOn = function (recipientId) {
 //     console.log("Turning typing indicator on");
 //
 //     var messageData = {
@@ -388,7 +388,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Turn typing indicator off
 //  *
 //  */
-// self.prototype.sendTypingOff = function (recipientId) {
+// VvtSend.prototype.sendTypingOff = function (recipientId) {
 //     console.log("Turning typing indicator off");
 //
 //     var messageData = {
@@ -405,7 +405,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a message with the account linking call-to-action
 //  *
 //  */
-// self.prototype.sendAccountLinking = function (recipientId) {
+// VvtSend.prototype.sendAccountLinking = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -431,7 +431,7 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //  * Send a Gif using the Send API.
 //  *
 //  */
-// self.prototype.sendGifMessage = function (recipientId) {
+// VvtSend.prototype.sendGifMessage = function (recipientId) {
 //     var messageData = {
 //         recipient: {
 //             id: recipientId
@@ -449,4 +449,4 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //     callSendAPI(messageData);
 // }
 
-module.exports = new self();
+module.exports = new VvtSend();
