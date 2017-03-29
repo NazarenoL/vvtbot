@@ -449,4 +449,4 @@ self.prototype.sendOptionsMessage = function (recipientId) {
 //     callSendAPI(messageData);
 // }
 
-exports = new self();
+module.exports = new self();
