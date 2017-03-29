@@ -29,8 +29,8 @@
       <file leaf-file-name="vvt-send.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vvt-send.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-651">
-              <caret line="93" column="109" lean-forward="true" selection-start-line="93" selection-start-column="109" selection-end-line="93" selection-end-column="109" />
+            <state relative-caret-position="244">
+              <caret line="160" column="11" lean-forward="false" selection-start-line="160" selection-start-column="3" selection-end-line="160" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -90,6 +90,7 @@
       <find>vvtsend</find>
       <find>sendtextmessage</find>
       <find>sendOptionsMessage</find>
+      <find>vvtsend.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -261,12 +262,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490808439225</updated>
-      <workItem from="1490808440508" duration="5183000" />
+      <workItem from="1490808440508" duration="5698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5183000" />
+    <option name="totallyTimeSpent" value="5698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -365,8 +366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vvt-send.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-651">
-          <caret line="93" column="109" lean-forward="true" selection-start-line="93" selection-start-column="109" selection-end-line="93" selection-end-column="109" />
+        <state relative-caret-position="244">
+          <caret line="160" column="11" lean-forward="false" selection-start-line="160" selection-start-column="3" selection-end-line="160" selection-end-column="11" />
           <folding />
         </state>
       </provider>

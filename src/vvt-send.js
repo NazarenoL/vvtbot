@@ -90,7 +90,7 @@ VvtSend.prototype.sendTextMessage = function (recipientId, messageText) {
  * Sends a message with all the available options.
  */
 VvtSend.prototype.sendOptionsMessage = function (recipientId) {
-    VvtSend.sendTextMessage(recipientId, 'Che! Esta es una versión de prueba y no pude entender lo que me dijiste.' +
+    this.sendTextMessage(recipientId, 'Che! Esta es una versión de prueba y no pude entender lo que me dijiste.' +
         'Por ahora nada mas soporto que me preguntes informacion de visas. Si queres preguntame sobre eso.');
 }
 
@@ -149,7 +149,7 @@ VvtSend.prototype.replyTextMessage = function (messageText, senderId) {
         //     break;
 
         default:
-            VvtSend.sendOptionsMessage(senderId, messageText);
+            this.sendOptionsMessage(senderId, messageText);
     }
 };
 
