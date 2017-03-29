@@ -1,8 +1,11 @@
 'use strict';
 
-request = require('request');
+request = require('../request');
 
-var VvtSend = function () {};
+function VvtSend (pageAccessToken, moduleRequest) {
+    this.pageAccessToken = pageAccessToken;
+    this.moduleRequest = moduleRequest;
+};
 
 /*
  * Call the Send API. The message data goes in the body. If successful, we'll
@@ -10,9 +13,9 @@ var VvtSend = function () {};
  *
  */
 VvtSend.prototype.callSendAPI = function (messageData) {
-    request({
+    this.moduleRequestrequest({
         uri: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: { access_token: global.PAGE_ACCESS_TOKEN },
+        qs: { access_token: this.pageAccessToken },
         method: 'POST',
         json: messageData
     }, function (error, response, body) {
@@ -120,4 +123,4 @@ VvtSend.prototype.replyTextMessage = function (messageText, senderId) {
 //     callSendAPI(messageData);
 // }
 
-module.exports = new VvtSend();
+module.exports = VvtSend;

@@ -17,7 +17,7 @@ const
   express = require('express'),
   https = require('https'),
   request = require('request'),
-  vvtSend = require('./src/vvt-send.js');
+  VvtSend = require('./src/vvt-send.js');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -55,6 +55,8 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   console.error("Missing config values");
   process.exit(1);
 }
+
+var vvtSend = VvtSend(PAGE_ACCESS_TOKEN, request);
 
 /*
  * Use your own validation token. Check that the token used in the Webhook 
@@ -220,8 +222,7 @@ function receivedMessage(event) {
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
-  console.log("Received message for user %d and page %d at %d with message:",
-    senderID, recipientID, timeOfMessage);
+  console.log("Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
 
   var isEcho = message.is_echo;
@@ -236,15 +237,13 @@ function receivedMessage(event) {
 
   if (isEcho) {
     // Just logging message echoes to console
-    console.log("Received echo for message %s and app %d with metadata %s",
-      messageId, appId, metadata);
+    console.log("Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
     return;
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
-    console.log("Quick reply for message %s with payload %s",
-      messageId, quickReplyPayload);
+    console.log("Quick reply for message %s with payload %s", messageId, quickReplyPayload);
 
-    sendTextMessage(senderID, "Quick reply tapped");
+    vvtSend.sendTextMessage(senderID, "Quick reply tapped");
     return;
   }
 
@@ -273,8 +272,7 @@ function receivedDeliveryConfirmation(event) {
 
   if (messageIDs) {
     messageIDs.forEach(function(messageID) {
-      console.log("Received delivery confirmation for message ID: %s",
-        messageID);
+      console.log("Received delivery confirmation for message ID: %s", messageID);
     });
   }
 
@@ -321,8 +319,7 @@ function receivedMessageRead(event) {
   var watermark = event.read.watermark;
   var sequenceNumber = event.read.seq;
 
-  console.log("Received message read event for watermark %d and sequence " +
-    "number %d", watermark, sequenceNumber);
+  console.log("Received message read event for watermark %d and sequence number %d", watermark, sequenceNumber);
 }
 
 /*
@@ -341,7 +338,7 @@ function receivedAccountLink(event) {
   var authCode = event.account_linking.authorization_code;
 
   console.log("Received account link event with for user %d with status %s " +
-    "and auth code %s ", senderID, status, authCode);
+    " and auth code %s ", senderID, status, authCode);
 }
 
 // Start server
