@@ -8,7 +8,7 @@ var VvtSend = function () {};
  *
  */
 VvtSend.prototype.callSendAPI = function (messageData) {
-    request({
+    global.request({
         uri: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: global.PAGE_ACCESS_TOKEN },
         method: 'POST',
